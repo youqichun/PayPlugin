@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+        <PreferenceCategory
+                android:key="keep_alive"
+                android:summary="报告连接"
+                android:title="报告连接">
+          <CheckBoxPreference
+                        android:title="是否使用socket.io echo server"
+                        android:defaultValue="false"
+                        android:key="isecho" />
+        <EditTextPreference
+                        android:defaultValue=""
+                        android:key="echoserver"
+                        android:summary="echo socket.io 服务器"
+                        android:title="echo 服务器" />
+        <EditTextPreference
+                        android:defaultValue=""
+                        android:key="echointerval"
+                        android:summary="echo 间隔(秒),建议设置为15秒以上，如设置过大（如10分钟以上时），导致server频繁接到disconnect事件可以调小到不会频繁断开为止。"
+                        android:title="echo 间隔" />
+        </PreferenceCategory>
+</PreferenceScreen>
